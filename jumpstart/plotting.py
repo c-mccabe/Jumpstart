@@ -15,7 +15,6 @@ plot_columns = ['In work',
                  'Interview score']
 
 plt.style.use('seaborn')
-plt.rcParams["font.family"] = 'Futura'
 
 
 def plot_coefficients(coefficients):
