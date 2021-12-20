@@ -10,7 +10,7 @@ def main():
     X, y = get_X_y(df)
     coefficients, mae = get_regression_coefficients(X, y)
     plot_coefficients(coefficients)
-    plot_mae(mae)
+    #plot_mae(mae)
 
 
 if __name__ == '__main__':

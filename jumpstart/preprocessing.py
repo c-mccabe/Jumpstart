@@ -3,13 +3,16 @@ from sklearn.preprocessing import OneHotEncoder
 
 model_columns = ['In work',
                  'Years since graduation (and being on programme)',
-                 'Applicant type',
                  'Academics',
                  'Extra-Curricular',
                  'Work Experience',
-                 'Motivations (general)',
+                 'Logical thinking (presentation)',
+                 'Comms (presentations)',
+                 'Hard work (presentation)',
                  'Problem solving (gym/spotify)',
-                 'Jumpstart interview score']
+                 'Motivations (general)',
+                 'Feedback',
+                 'Interview score']
 
 
 def preprocess_df(df):
@@ -33,5 +36,5 @@ def get_X_y(df):
     df = preprocess_df(df)
     X = np.array(df[model_columns].fillna(0))
     y = np.array(df['Start-up interview rating'])
-    X = one_hot_encode_applicant_type(X)
+    #X = one_hot_encode_applicant_type(X)
     return X, y
